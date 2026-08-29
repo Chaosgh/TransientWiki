@@ -1,11 +1,16 @@
 @import './theme.css';
 
 :root {
-    --ink: #f7f4ef;
-    --muted: #a5adba;
-    --cyan: #2cc5ff;
-    --brass: #d49449;
-    --page: #0d1016;
+    --ink: #f4e7d2;
+    --muted: #b7a58e;
+    --gold: #f2a01b;
+    --gold-light: #ffc354;
+    --copper: #a94f17;
+    --rust: #6f2f1b;
+    --iron: #adb3b3;
+    --brass: #d67a17;
+    --cyan: var(--gold);
+    --page: #130d0a;
 }
 
 * {
@@ -64,7 +69,7 @@ a:hover {
 }
 
 ::selection {
-    background: rgba(0, 159, 255, 0.32);
+    background: rgba(242, 160, 27, 0.34);
 }
 
 :focus-visible {

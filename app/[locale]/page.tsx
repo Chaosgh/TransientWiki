@@ -68,7 +68,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
 
       <header className={styles.header}>
         <Link className={styles.brand} href={`/${locale}/`} aria-label="TransientRealm home">
-          <Image src="/logo.png" width={54} height={54} alt="" priority />
+          <Image src="/logo.png" width={54} height={54} alt="" loading="eager" />
           <span>TRANSIENT<em>REALM</em></span>
         </Link>
         <nav className={styles.nav} aria-label={locale === "de" ? "Hauptnavigation" : "Main navigation"}>
@@ -78,6 +78,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           <a href="#faq">{content.nav.faq}</a>
         </nav>
         <div className={styles.headerActions}>
+          <Link className={styles.headerWiki} href={`/${locale}/wiki/`}>Wiki</Link>
           <Link className={styles.language} href={`/${otherLocale}/`} hrefLang={otherLocale} aria-label={locale === "de" ? "Switch to English" : "Zu Deutsch wechseln"}>
             {otherLocale.toUpperCase()}
           </Link>
@@ -105,7 +106,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           </div>
           <div className={styles.heroVisual}>
             <div className={styles.logoHalo} aria-hidden="true" />
-            <Image src="/logo.png" width={640} height={640} alt="TransientRealm steampunk locomotive logo" priority sizes="(max-width: 900px) 78vw, 45vw" />
+            <Image src="/logo.png" width={640} height={640} alt="TransientRealm steampunk locomotive logo" loading="eager" sizes="(max-width: 900px) 78vw, 45vw" />
             <div className={`${styles.orbitLabel} ${styles.orbitTop}`}>RPG <b>×</b> CITYBUILD</div>
           </div>
           <div className={styles.scrollHint} aria-hidden="true"><span />Scroll</div>
