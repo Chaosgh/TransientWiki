@@ -129,7 +129,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
             {content.features.items.map((feature) => (
               <article className={styles.featureCard} key={feature.marker}>
                 <span>{feature.marker}</span>
-                <div className={styles.cardGlyph} aria-hidden="true"><i /><i /></div>
+                <span className={styles.cardGlyph} aria-hidden="true" />
                 <h3>{feature.title}</h3>
                 <p>{feature.text}</p>
               </article>
