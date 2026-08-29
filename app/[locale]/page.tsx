@@ -72,7 +72,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           <span>TRANSIENT<em>REALM</em></span>
         </Link>
         <nav className={styles.nav} aria-label={locale === "de" ? "Hauptnavigation" : "Main navigation"}>
-          <a href="#erlebnis">{content.nav.experience}</a>
           <a href="#systeme">{content.nav.systems}</a>
           <a href="#start">{content.nav.start}</a>
           <Link href={`/${locale}/wiki/`}>Wiki</Link>
@@ -118,25 +117,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           ))}
         </section>
 
-        <section className={`${styles.section} ${styles.experience}`} id="erlebnis">
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}><span />{content.experience.eyebrow}</p>
-            <h2>{content.experience.title}</h2>
-            <p>{content.experience.text}</p>
-          </div>
-          <div className={styles.blueprint} aria-hidden="true">
-            <span className={styles.gearLarge}>✦</span>
-            <span className={styles.gearSmall}>✦</span>
-            <div className={styles.blueprintLines} />
-            <p>TRANSIENT // REALM</p>
-          </div>
-          <aside className={styles.callout}>
-            <span>TR—01</span>
-            <h3>{content.experience.callout}</h3>
-            <p>{content.experience.calloutText}</p>
-          </aside>
-        </section>
-
         <section className={`${styles.section} ${styles.systems}`} id="systeme">
           <div className={styles.sectionHeading}>
             <div>
@@ -177,20 +157,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.community}`}>
-          <div>
-            <p className={styles.eyebrow}><span />{content.community.eyebrow}</p>
-            <h2>{content.community.title}</h2>
-            <p className={styles.communityLead}>{content.community.text}</p>
-          </div>
-          <article className={styles.eventCard}>
-            <p>{content.community.eventLabel}</p>
-            <h3>{content.community.eventTitle}</h3>
-            <span>{content.community.eventText}</span>
-            <a href={DISCORD_URL} target="_blank" rel="noreferrer">{content.community.eventCta} <b aria-hidden="true">↗</b></a>
-          </article>
-        </section>
-
         <section className={`${styles.section} ${styles.faq}`} id="faq">
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}><span />{content.faq.eyebrow}</p>
@@ -206,14 +172,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           </div>
         </section>
 
-        <section className={styles.finalCta}>
-          <Image src="/logo.png" width={200} height={200} alt="" />
-          <div><h2>{content.final.title}</h2><p>{content.final.text}</p></div>
-          <div className={styles.finalActions}>
-            <CopyIpButton className={styles.primaryButton} label={content.final.play} copiedLabel={content.hero.copied} />
-            <Link className={styles.secondaryButton} href={`/${locale}/wiki/`}>{content.final.wiki} <span aria-hidden="true">→</span></Link>
-          </div>
-        </section>
       </main>
 
       <footer className={styles.footer}>
