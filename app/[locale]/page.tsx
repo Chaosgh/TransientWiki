@@ -75,6 +75,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           <a href="#erlebnis">{content.nav.experience}</a>
           <a href="#systeme">{content.nav.systems}</a>
           <a href="#start">{content.nav.start}</a>
+          <Link href={`/${locale}/wiki/`}>Wiki</Link>
           <a href="#faq">{content.nav.faq}</a>
         </nav>
         <div className={styles.headerActions}>
