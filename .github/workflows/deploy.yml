@@ -36,16 +36,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Create SPA fallback for BrowserRouter
-        run: cp dist/index.html dist/404.html
-
       - name: Create .nojekyll
-        run: touch dist/.nojekyll
+        run: touch out/.nojekyll
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: dist
+          path: out
 
   deploy:
     environment:
