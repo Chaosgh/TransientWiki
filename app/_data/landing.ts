@@ -39,7 +39,7 @@ export const copy: Record<Locale, LandingCopy> = {
     },
     nav: { experience: "Erlebnis", systems: "Systeme", start: "Loslegen", faq: "FAQ" },
     hero: {
-      eyebrow: "Minecraft Java · Open Alpha",
+      eyebrow: "Minecraft Java · Jetzt online",
       title: "Baue nicht nur eine Stadt. Hinterlasse eine Spur.",
       lead: "TransientRealm verbindet tiefes CityBuild mit Steampunk-RPG: eigene Jobs, Quests, Kulte und eine Welt, in der dein Fortschritt wirklich zählt.",
       play: "Server-IP kopieren", discord: "Discord beitreten", wiki: "Wiki entdecken",
@@ -101,7 +101,7 @@ export const copy: Record<Locale, LandingCopy> = {
     },
     nav: { experience: "Experience", systems: "Systems", start: "Get started", faq: "FAQ" },
     hero: {
-      eyebrow: "Minecraft Java · Open Alpha", title: "Don’t just build a city. Leave your mark.",
+      eyebrow: "Minecraft Java · Live now", title: "Don’t just build a city. Leave your mark.",
       lead: "TransientRealm brings deep CityBuild and steampunk RPG together: custom professions, quests, factions, and a world where your progress matters.",
       play: "Copy server IP", discord: "Join Discord", wiki: "Explore the wiki",
       ipLabel: "Your connection to the Realm", copy: "Copy", copied: "Copied!",
