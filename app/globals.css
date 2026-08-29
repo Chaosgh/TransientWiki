@@ -1,6 +1,26 @@
 @import './theme.css';
 
+@font-face {
+    font-family: 'Monocraft';
+    src: url('/fonts/Monocraft-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Monocraft';
+    src: url('/fonts/Monocraft-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+}
+
 :root {
+    --font-display: 'Monocraft', ui-monospace, monospace;
+    --font-body: 'Monocraft', ui-monospace, monospace;
+    --font-sans: 'Monocraft', ui-monospace, monospace;
+    --font-mono: 'Monocraft', ui-monospace, monospace;
     --ink: #f4e7d2;
     --muted: #b7a58e;
     --gold: #f2a01b;
