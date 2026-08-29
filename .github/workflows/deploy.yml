@@ -38,7 +38,6 @@ jobs:
 
       - name: Create .nojekyll
         run: touch out/.nojekyll
-
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:

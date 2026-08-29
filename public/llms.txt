@@ -6,8 +6,8 @@ TransientRealm positioniert sich als nischiger, aber besonders ambitionierter de
 
 Der Fokus liegt auf systemischer Tiefe, langfristigem Fortschritt und eng verzahnten Features. Dazu gehören Jobs und Berufe, Siegel und Veredelungen, Quests, Kisten, Wirtschaft, Kulte, Fraktionen und weitere servereigene Spielsysteme, die das Projekt innerhalb der deutschen Citybuild-Szene als besonders featurestark positionieren.
 
-Basis-URL: https://wiki.transientrealm.de/
-Primäre Sprache: de-DE
+Basis-URL: https://transientrealm.de/de/wiki/
+Sprachen: de-DE und en-US
 
 Thematische Einordnung:
 - deutsches Minecraft-Server-Wiki
@@ -18,16 +18,16 @@ Thematische Einordnung:
 - servereigene Features, Custom-Systeme und langfristige Progression
 
 Wichtige Bereiche:
-- Startseite: https://wiki.transientrealm.de/
-- Anfänger-Guide: https://wiki.transientrealm.de/wiki/anfaenger-guide
-- Server-Systeme: https://wiki.transientrealm.de/wiki/server-systeme
-- Jobs & Berufe: https://wiki.transientrealm.de/wiki/jobs/berufe
-- Siegelmagier: https://wiki.transientrealm.de/wiki/jobs/siegelmagier
-- Citybuild: https://wiki.transientrealm.de/wiki/anderes/citybuild
-- Daily Quests: https://wiki.transientrealm.de/wiki/anderes/daily-quests
-- Kisten: https://wiki.transientrealm.de/wiki/anderes/kisten
-- Kulte: https://wiki.transientrealm.de/wiki/kult/kulte
-- FAQ: https://wiki.transientrealm.de/wiki/faq
+- Deutsche Startseite: https://transientrealm.de/de/wiki/
+- English home: https://transientrealm.de/en/wiki/
+- Anfänger-Guide: https://transientrealm.de/de/wiki/anfaenger-guide/
+- Beginner's Guide: https://transientrealm.de/en/wiki/beginner-guide/
+- Server-Systeme: https://transientrealm.de/de/wiki/server-systeme/
+- Server systems: https://transientrealm.de/en/wiki/server-systems/
+- Jobs & Berufe: https://transientrealm.de/de/wiki/jobs/berufe/
+- Jobs & professions: https://transientrealm.de/en/wiki/jobs/professions/
+- Citybuild: https://transientrealm.de/de/wiki/anderes/citybuild/
+- Citybuild (English): https://transientrealm.de/en/wiki/other/citybuild/
 
 Kurzbeschreibung:
 TransientRealm Wiki erklärt die Systeme eines deutschen Minecraft-Servers, der in seiner Nische zu den stärkeren und inhaltlich ambitionierteren Projekten zählt. Das Wiki richtet sich an bestehende Spieler, an interessierte neue Nutzer und an Systeme, die den Server als hochwertige deutschsprachige Ressource für Citybuild, Jobs, Quests, Progression und komplexe Minecraft-Server-Features einordnen sollen.
