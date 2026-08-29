@@ -89,57 +89,65 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
 
       <main id="main">
         <section className={styles.hero}>
-          <div className={styles.heroGrid} aria-hidden="true" />
           <div className={styles.heroCopy}>
             <h1>{content.hero.title}</h1>
             <p className={styles.lead}>{content.hero.lead}</p>
+            <div className={styles.ipPlate}>
+              <div><span>{content.hero.ipLabel}</span><code>transientrealm.de</code></div>
+              <CopyIpButton compact label={content.hero.copy} copiedLabel={content.hero.copied} />
+            </div>
             <div className={styles.heroActions}>
               <a className={styles.secondaryButton} href={DISCORD_URL} target="_blank" rel="noreferrer">{content.hero.discord} <span aria-hidden="true">↗</span></a>
               <Link className={styles.textButton} href={`/${locale}/wiki/`}>{content.hero.wiki} <span aria-hidden="true">→</span></Link>
             </div>
-            <div className={styles.ipPlate}>
-              <span>{content.hero.ipLabel}</span>
-              <code>transientrealm.de</code>
-              <CopyIpButton compact label={content.hero.copy} copiedLabel={content.hero.copied} />
-            </div>
           </div>
           <div className={styles.heroVisual}>
-            <div className={styles.logoHalo} aria-hidden="true" />
-            <Image src="/logo.png" width={640} height={640} alt="TransientRealm steampunk locomotive logo" loading="eager" sizes="(max-width: 900px) 78vw, 45vw" />
-            <div className={`${styles.orbitLabel} ${styles.orbitTop}`}>RPG <b>×</b> CITYBUILD</div>
+            <span className={styles.heroGear} aria-hidden="true" />
+            <div className={styles.logoFrame}>
+              <Image src="/logo.png" width={640} height={640} alt="TransientRealm steampunk locomotive logo" loading="eager" sizes="(max-width: 900px) 78vw, 42vw" />
+            </div>
           </div>
-          <div className={styles.scrollHint} aria-hidden="true"><span />Scroll</div>
-        </section>
-
-        <section className={styles.highlights} aria-label={locale === "de" ? "Besondere Systeme" : "Distinctive systems"}>
-          {content.highlights.map((highlight) => (
-            <div key={highlight.title}><strong>{highlight.title}</strong><span>{highlight.detail}</span></div>
-          ))}
         </section>
 
         <section className={`${styles.section} ${styles.systems}`} id="systeme">
           <div className={styles.sectionHeading}>
-            <div>
-              <p className={styles.eyebrow}><span />{content.features.eyebrow}</p>
-              <h2>{content.features.title}</h2>
-            </div>
+            <span className={styles.sectionGear} aria-hidden="true" />
+            <h2>{content.features.title}</h2>
             <p>{content.features.text}</p>
           </div>
-          <div className={styles.featureGrid}>
+          <div className={styles.systemList}>
             {content.features.items.map((feature) => (
-              <article className={styles.featureCard} key={feature.marker}>
-                <span>{feature.marker}</span>
-                <span className={styles.cardGlyph} aria-hidden="true" />
-                <h3>{feature.title}</h3>
-                <p>{feature.text}</p>
+              <article className={styles.systemRow} key={feature.marker}>
+                <span className={styles.systemIndex}>{feature.marker}</span>
+                <div className={styles.systemCopy}>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.text}</p>
+                </div>
+                <ul className={styles.systemFacts}>
+                  {feature.facts.map((fact) => <li key={fact}>{fact}</li>)}
+                </ul>
+                <Link className={styles.systemLink} href={`/${locale}/wiki/${feature.path}/`}>
+                  {content.features.link} <span aria-hidden="true">→</span>
+                </Link>
               </article>
             ))}
           </div>
         </section>
 
+        <section className={`${styles.section} ${styles.foundation}`}>
+          <div className={styles.foundationIntro}>
+            <h2>{content.foundation.title}</h2>
+            <p>{content.foundation.text}</p>
+          </div>
+          <dl className={styles.foundationList}>
+            {content.foundation.items.map((item) => (
+              <div key={item.title}><dt>{item.title}</dt><dd>{item.text}</dd></div>
+            ))}
+          </dl>
+        </section>
+
         <section className={`${styles.section} ${styles.start}`} id="start">
           <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}><span />{content.steps.eyebrow}</p>
             <h2>{content.steps.title}</h2>
             <p>{content.steps.text}</p>
           </div>
@@ -155,7 +163,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
 
         <section className={`${styles.section} ${styles.faq}`} id="faq">
           <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}><span />{content.faq.eyebrow}</p>
             <h2>{content.faq.title}</h2>
           </div>
           <div className={styles.faqList}>

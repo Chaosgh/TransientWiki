@@ -12,61 +12,87 @@ type LandingCopy = {
     title: string; lead: string; discord: string;
     wiki: string; ipLabel: string; copy: string; copied: string;
   };
-  highlights: { title: string; detail: string }[];
   features: {
-    eyebrow: string; title: string; text: string;
-    items: { marker: string; title: string; text: string }[];
+    title: string; text: string; link: string;
+    items: { marker: string; title: string; text: string; facts: string[]; path: string }[];
   };
-  steps: {
-    eyebrow: string; title: string; text: string;
+  foundation: {
+    title: string; text: string;
     items: { title: string; text: string }[];
   };
-  faq: { eyebrow: string; title: string; items: { question: string; answer: string }[] };
+  steps: {
+    title: string; text: string;
+    items: { title: string; text: string }[];
+  };
+  faq: { title: string; items: { question: string; answer: string }[] };
   footer: { tagline: string; wiki: string; discord: string; imprint: string; privacy: string };
 };
 
 export const copy: Record<Locale, LandingCopy> = {
   de: {
     metadata: {
-      title: "TransientRealm — Steampunk CityBuild & RPG",
-      description: "Minecraft-Java-CityBuild mit zehn Jobs, täglichen Quests, Kulten, eigener Wirtschaft und einem prozeduralen Labyrinth.",
+      title: "TransientRealm — Minecraft CityBuild mit eigenen Systemen",
+      description: "Minecraft-Java-Server mit Custom-Angeln, Runen und Siegeln, Kulten, Fraktionen und dem prozeduralen Transient Maze.",
     },
     nav: { systems: "Systeme", start: "Verbinden", faq: "FAQ" },
     hero: {
-      title: "CityBuild mit Jobs, Kulten und eigenem Labyrinth.",
-      lead: "Hol dir ein Plot, levele zehn Berufe parallel, erledige täglich drei Quests oder gründe einen Kult mit eigener Bank und Levelsystem.",
-      discord: "Discord beitreten", wiki: "Wiki entdecken",
-      ipLabel: "Server-Adresse", copy: "Kopieren", copied: "Kopiert!",
+      title: "Plots, Kulte, Runen und das Transient Maze.",
+      lead: "TransientRealm verbindet CityBuild-Systeme miteinander: Fische liefern Auren, Auren werden zu Siegeln und Kult-Fortschritt schaltet Fraktionen, Boni und Märkte frei.",
+      discord: "Discord", wiki: "Wiki öffnen",
+      ipLabel: "Server-Adresse", copy: "IP kopieren", copied: "Kopiert!",
     },
-    highlights: [
-      { title: "Custom-Angeln", detail: "Minigame, Fischqualität, Gewicht & Anglerbuch" },
-      { title: "Runen & Siegel", detail: "eigene Altäre, Auren & dauerhafte Item-Effekte" },
-      { title: "Kulte & Fraktionen", detail: "Bank, Level, Gruppenboni & Wochenmarkt" },
-      { title: "Transient Maze", detail: "Fallen, Bossräume, Illusionswände & Tresore" },
-    ],
     features: {
-      eyebrow: "Server-Systeme", title: "Was tatsächlich drin ist.",
-      text: "Die wichtigsten Mechaniken in Kurzform. Befehle und vollständige Erklärungen stehen im Wiki.",
+      title: "Vier Systeme, die den Server prägen.",
+      text: "Keine Feature-Namensliste: Das hier sind die Mechaniken, die sich durch den Spielfortschritt ziehen. Details, Rezepte und Befehle stehen direkt im Wiki.",
+      link: "Im Wiki",
       items: [
-        { marker: "01", title: "CityBuild", text: "Eigene Plots mit Einladungen, Merge, einstellbaren Flags und Kistenshops." },
-        { marker: "02", title: "Zehn Jobs", text: "Alle Berufe können parallel laufen. Arbeit bringt Pfund, Job-XP und neue Rezepte." },
-        { marker: "03", title: "Daily Quests", text: "Drei Aufgaben pro Tag für Mining, Angeln, Crafting oder Kampf. Reset um 0 Uhr." },
-        { marker: "04", title: "Kulte", text: "Eigene Gruppen mit Bank, Levelsystem, Rängen, Fraktionen und Wochenmarkt." },
-        { marker: "05", title: "Wirtschaft", text: "Pfund für Handel, Ectoplasma für Kisten und Rubine für Kult-Upgrades." },
-        { marker: "06", title: "Labyrinth", text: "Prozedurales Maze mit zufälligem Einstieg, Fallen, Bossräumen, Tresoren und Schlüsseln." },
+        {
+          marker: "01", title: "Custom-Angeln",
+          text: "Jeder Biss startet ein eigenes Reaktions-Minispiel. Fischart, Gewicht, Qualität und Biom bestimmen Seltenheit und Verkaufspreis; das Anglerbuch hält jeden Erstfang fest.",
+          facts: ["5 Schwierigkeitsgrade", "45 Plätze im Angelbeutel", "Biomabhängige Fische"],
+          path: "jobs/angeln",
+        },
+        {
+          marker: "02", title: "Runen & Siegel",
+          text: "Runenmechaniker und Siegelmagier arbeiten an eigenen Werkbänken. Auren aus Forschung, Angeln und Maze werden zu dauerhaften Effekten für Werkzeuge, Waffen und Angelruten.",
+          facts: ["Runentisch & Siegelaltar", "Auren aus anderen Systemen", "Eigene Item-Effekte"],
+          path: "jobs/siegelmagier",
+        },
+        {
+          marker: "03", title: "Kulte & Fraktionen",
+          text: "Kulte besitzen Bank, Ränge und ein eigenes Levelsystem. Ab Level 5 öffnet der Wochenmarkt; ab Level 10 entscheidet ihr euch für Orden, Kaufmannsbund oder Bauernschaft.",
+          facts: ["3 Fraktionen", "Kultweite Boni", "Wöchentliches Marktangebot"],
+          path: "kult/fraktionen",
+        },
+        {
+          marker: "04", title: "Transient Maze",
+          text: "Der Einstieg setzt dich zufällig in ein prozedurales Labyrinth. Hinter Illusionswänden warten Fallen, Raidkammern, Parkour, Tresore und die Gift-Aura für Siegel.",
+          facts: ["7 Fallentypen", "Boss- & Rätselräume", "Maze-Schlüssel & Tresore"],
+          path: "anderes/labyrinth",
+        },
+      ],
+    },
+    foundation: {
+      title: "Darunter läuft ein klarer CityBuild-Kern.",
+      text: "Die eigenen Systeme ersetzen den normalen Serverablauf nicht. Sie bauen auf Plots, Berufen, Quests und einer getrennten Wirtschaft auf.",
+      items: [
+        { title: "Plots", text: "Einladungen, Merge, Flags und Kistenshops." },
+        { title: "Berufe", text: "Zehn Jobs parallel leveln und Rezepte freischalten." },
+        { title: "Tägliche Quests", text: "Drei Aufgaben pro Tag; neuer Satz um 0 Uhr." },
+        { title: "Wirtschaft", text: "Pfund, Ectoplasma und Rubine mit festen Aufgaben." },
       ],
     },
     steps: {
-      eyebrow: "Direkt loslegen", title: "Verbinden, Plot holen, spielen.",
+      title: "In drei Schritten auf den Server.",
       text: "Du brauchst Minecraft Java. Die Server-Adresse lautet transientrealm.de.",
       items: [
         { title: "Server hinzufügen", text: "Öffne Mehrspieler und trage transientrealm.de als Serveradresse ein." },
-        { title: "Plot beanspruchen", text: "Nutze /plot auto, um dir automatisch ein freies Grundstück zu holen." },
-        { title: "Systeme öffnen", text: "Starte mit /job und /quests; alle weiteren Befehle findest du im Wiki." },
+        { title: "Plot beanspruchen", text: "Nutze /plot auto, um automatisch ein freies Grundstück zu erhalten." },
+        { title: "Systeme öffnen", text: "Starte mit /job und /quests. Alle weiteren Befehle stehen im Wiki." },
       ],
     },
     faq: {
-      eyebrow: "Kurzinfo", title: "Häufige Fragen.",
+      title: "Vor dem ersten Join.",
       items: [
         { question: "Welche Minecraft-Version brauche ich?", answer: "TransientRealm läuft auf Minecraft Java. Die aktuell unterstützte Version findest du jederzeit im Discord und im Wiki." },
         { question: "Ist der Server kostenlos?", answer: "Ja, der Beitritt und das Spielen sind kostenlos." },
@@ -74,49 +100,72 @@ export const copy: Record<Locale, LandingCopy> = {
         { question: "Wo finde ich Befehle und Hilfe?", answer: "Befehle und System-Guides stehen im Wiki. Für direkte Hilfe gibt es den Discord." },
       ],
     },
-    footer: { tagline: "Steampunk CityBuild & RPG für Minecraft Java.", wiki: "Wiki", discord: "Discord", imprint: "Impressum", privacy: "Datenschutz" },
+    footer: { tagline: "Minecraft Java: CityBuild, Kulte, Runen und Maze.", wiki: "Wiki", discord: "Discord", imprint: "Impressum", privacy: "Datenschutz" },
   },
   en: {
     metadata: {
-      title: "TransientRealm — Steampunk CityBuild & RPG",
-      description: "Minecraft Java CityBuild with ten jobs, daily quests, cults, its own economy, and a procedural maze.",
+      title: "TransientRealm — Minecraft CityBuild with custom systems",
+      description: "Minecraft Java server with custom fishing, runes and sigils, cults, factions, and the procedural Transient Maze.",
     },
     nav: { systems: "Systems", start: "Connect", faq: "FAQ" },
     hero: {
-      title: "CityBuild with jobs, cults, and a procedural maze.",
-      lead: "Claim a plot, level ten professions at once, complete three daily quests, or create a cult with its own bank and leveling system.",
-      discord: "Join Discord", wiki: "Explore the wiki",
-      ipLabel: "Server address", copy: "Copy", copied: "Copied!",
+      title: "Plots, cults, runes, and the Transient Maze.",
+      lead: "TransientRealm connects its CityBuild systems: fish provide auras, auras become sigils, and cult progression unlocks factions, bonuses, and markets.",
+      discord: "Discord", wiki: "Open the wiki",
+      ipLabel: "Server address", copy: "Copy IP", copied: "Copied!",
     },
-    highlights: [
-      { title: "Custom fishing", detail: "minigame, fish quality, weight & collection book" },
-      { title: "Runes & sigils", detail: "custom altars, auras & permanent item effects" },
-      { title: "Cults & factions", detail: "bank, levels, group bonuses & weekly market" },
-      { title: "Transient Maze", detail: "traps, boss rooms, illusion walls & vaults" },
-    ],
     features: {
-      eyebrow: "Server systems", title: "What is actually included.",
-      text: "The main mechanics in brief. Commands and complete explanations are available in the wiki.",
+      title: "Four systems that define the server.",
+      text: "This is not a list of feature names. These mechanics connect across your progression. Detailed recipes, commands, and rules are documented in the wiki.",
+      link: "View in wiki",
       items: [
-        { marker: "01", title: "CityBuild", text: "Personal plots with invitations, merging, configurable flags, and chest shops." },
-        { marker: "02", title: "Ten jobs", text: "All professions can run in parallel. Work earns pounds, job XP, and new recipes." },
-        { marker: "03", title: "Daily quests", text: "Three tasks per day covering mining, fishing, crafting, or combat. Reset at midnight." },
-        { marker: "04", title: "Cults", text: "Player groups with a bank, leveling system, ranks, factions, and weekly market." },
-        { marker: "05", title: "Economy", text: "Pounds for trading, ectoplasm for crates, and rubies for cult upgrades." },
-        { marker: "06", title: "Maze", text: "Procedural maze with random entry points, traps, boss rooms, vaults, and keys." },
+        {
+          marker: "01", title: "Custom fishing",
+          text: "Every bite starts a reaction minigame. Species, weight, quality, and biome determine rarity and value; the fishing book records every first catch.",
+          facts: ["5 difficulty levels", "45-slot fishing bag", "Biome-specific fish"],
+          path: "jobs/fishing",
+        },
+        {
+          marker: "02", title: "Runes & sigils",
+          text: "Rune mechanics and sigil mages use dedicated workstations. Auras from research, fishing, and the Maze become permanent effects for tools, weapons, and fishing rods.",
+          facts: ["Rune table & sigil altar", "Auras from linked systems", "Custom item effects"],
+          path: "jobs/sigil-mage",
+        },
+        {
+          marker: "03", title: "Cults & factions",
+          text: "Cults have a bank, ranks, and their own leveling system. Level 5 opens the weekly market; at level 10 you choose the Order, Merchants' Guild, or Peasantry.",
+          facts: ["3 factions", "Cult-wide bonuses", "Weekly market rotation"],
+          path: "cults/factions",
+        },
+        {
+          marker: "04", title: "Transient Maze",
+          text: "Entry drops you at a random point in a procedural maze. Illusion walls hide traps, raid chambers, parkour, vaults, and the poison aura used for sigils.",
+          facts: ["7 trap types", "Boss & puzzle rooms", "Maze keys & vaults"],
+          path: "other/maze",
+        },
+      ],
+    },
+    foundation: {
+      title: "Underneath is a clear CityBuild core.",
+      text: "The custom systems do not replace the standard server loop. They build on plots, professions, quests, and a separated economy.",
+      items: [
+        { title: "Plots", text: "Invites, merging, flags, and chest shops." },
+        { title: "Professions", text: "Level ten jobs in parallel and unlock recipes." },
+        { title: "Daily quests", text: "Three tasks per day; a new set at midnight." },
+        { title: "Economy", text: "Pounds, ectoplasm, and rubies with fixed purposes." },
       ],
     },
     steps: {
-      eyebrow: "Start directly", title: "Connect, claim a plot, play.",
+      title: "Join the server in three steps.",
       text: "You need Minecraft Java. The server address is transientrealm.de.",
       items: [
         { title: "Add the server", text: "Open Multiplayer and enter transientrealm.de as the server address." },
         { title: "Claim a plot", text: "Use /plot auto to claim an available plot automatically." },
-        { title: "Open the systems", text: "Start with /job and /quests; all other commands are documented in the wiki." },
+        { title: "Open the systems", text: "Start with /job and /quests. Every other command is in the wiki." },
       ],
     },
     faq: {
-      eyebrow: "Quick facts", title: "Frequently asked questions.",
+      title: "Before your first join.",
       items: [
         { question: "Which Minecraft version do I need?", answer: "TransientRealm runs on Minecraft Java. You can always find the currently supported version on Discord and in the wiki." },
         { question: "Is the server free?", answer: "Yes. Joining and playing are free." },
@@ -124,6 +173,6 @@ export const copy: Record<Locale, LandingCopy> = {
         { question: "Where can I find commands and help?", answer: "Commands and system guides are in the wiki. For direct help, use Discord." },
       ],
     },
-    footer: { tagline: "Steampunk CityBuild & RPG for Minecraft Java.", wiki: "Wiki", discord: "Discord", imprint: "Legal notice", privacy: "Privacy" },
+    footer: { tagline: "Minecraft Java: CityBuild, cults, runes, and Maze.", wiki: "Wiki", discord: "Discord", imprint: "Legal notice", privacy: "Privacy" },
   },
 };
