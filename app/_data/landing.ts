@@ -9,10 +9,10 @@ type LandingCopy = {
   metadata: { title: string; description: string };
   nav: { systems: string; start: string; faq: string };
   hero: {
-    eyebrow: string; title: string; lead: string; play: string; discord: string;
+    title: string; lead: string; play: string; discord: string;
     wiki: string; ipLabel: string; copy: string; copied: string;
   };
-  pillars: { value: string; label: string }[];
+  highlights: { title: string; detail: string }[];
   features: {
     eyebrow: string; title: string; text: string;
     items: { marker: string; title: string; text: string }[];
@@ -33,15 +33,16 @@ export const copy: Record<Locale, LandingCopy> = {
     },
     nav: { systems: "Systeme", start: "Verbinden", faq: "FAQ" },
     hero: {
-      eyebrow: "Minecraft Java · CityBuild · Online",
       title: "CityBuild mit Jobs, Kulten und eigenem Labyrinth.",
       lead: "Hol dir ein Plot, levele zehn Berufe parallel, erledige täglich drei Quests oder gründe einen Kult mit eigener Bank und Levelsystem.",
       play: "Server-IP kopieren", discord: "Discord beitreten", wiki: "Wiki entdecken",
       ipLabel: "Server-Adresse", copy: "Kopieren", copied: "Kopiert!",
     },
-    pillars: [
-      { value: "10", label: "Jobs gleichzeitig" }, { value: "3", label: "tägliche Quests" },
-      { value: "3", label: "getrennte Währungen" }, { value: "1", label: "prozedurales Labyrinth" },
+    highlights: [
+      { title: "Custom-Angeln", detail: "Minigame, Fischqualität, Gewicht & Anglerbuch" },
+      { title: "Runen & Siegel", detail: "eigene Altäre, Auren & dauerhafte Item-Effekte" },
+      { title: "Kulte & Fraktionen", detail: "Bank, Level, Gruppenboni & Wochenmarkt" },
+      { title: "Transient Maze", detail: "Fallen, Bossräume, Illusionswände & Tresore" },
     ],
     features: {
       eyebrow: "Server-Systeme", title: "Was tatsächlich drin ist.",
@@ -82,14 +83,16 @@ export const copy: Record<Locale, LandingCopy> = {
     },
     nav: { systems: "Systems", start: "Connect", faq: "FAQ" },
     hero: {
-      eyebrow: "Minecraft Java · CityBuild · Online", title: "CityBuild with jobs, cults, and a procedural maze.",
+      title: "CityBuild with jobs, cults, and a procedural maze.",
       lead: "Claim a plot, level ten professions at once, complete three daily quests, or create a cult with its own bank and leveling system.",
       play: "Copy server IP", discord: "Join Discord", wiki: "Explore the wiki",
       ipLabel: "Server address", copy: "Copy", copied: "Copied!",
     },
-    pillars: [
-      { value: "10", label: "simultaneous jobs" }, { value: "3", label: "daily quests" },
-      { value: "3", label: "separate currencies" }, { value: "1", label: "procedural maze" },
+    highlights: [
+      { title: "Custom fishing", detail: "minigame, fish quality, weight & collection book" },
+      { title: "Runes & sigils", detail: "custom altars, auras & permanent item effects" },
+      { title: "Cults & factions", detail: "bank, levels, group bonuses & weekly market" },
+      { title: "Transient Maze", detail: "traps, boss rooms, illusion walls & vaults" },
     ],
     features: {
       eyebrow: "Server systems", title: "What is actually included.",

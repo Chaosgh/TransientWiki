@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CopyIpButton } from "@/app/_components/CopyIpButton";
+import { MobileNavigation } from "@/app/_components/MobileNavigation";
 import { copy, isLocale, locales } from "@/app/_data/landing";
 import styles from "./page.module.css";
 
@@ -78,7 +79,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           <a href="#faq">{content.nav.faq}</a>
         </nav>
         <div className={styles.headerActions}>
-          <Link className={styles.headerWiki} href={`/${locale}/wiki/`}>Wiki</Link>
+          <MobileNavigation locale={locale} labels={content.nav} discordUrl={DISCORD_URL} />
           <Link className={styles.language} href={`/${otherLocale}/`} hrefLang={otherLocale} aria-label={locale === "de" ? "Switch to English" : "Zu Deutsch wechseln"}>
             {otherLocale.toUpperCase()}
           </Link>
@@ -90,7 +91,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
         <section className={styles.hero}>
           <div className={styles.heroGrid} aria-hidden="true" />
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}><span />{content.hero.eyebrow}</p>
             <h1>{content.hero.title}</h1>
             <p className={styles.lead}>{content.hero.lead}</p>
             <div className={styles.heroActions}>
@@ -112,9 +112,9 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           <div className={styles.scrollHint} aria-hidden="true"><span />Scroll</div>
         </section>
 
-        <section className={styles.pillars} aria-label={locale === "de" ? "Spielschwerpunkte" : "Game pillars"}>
-          {content.pillars.map((pillar) => (
-            <div key={pillar.label}><strong>{pillar.value}</strong><span>{pillar.label}</span></div>
+        <section className={styles.highlights} aria-label={locale === "de" ? "Besondere Systeme" : "Distinctive systems"}>
+          {content.highlights.map((highlight) => (
+            <div key={highlight.title}><strong>{highlight.title}</strong><span>{highlight.detail}</span></div>
           ))}
         </section>
 
