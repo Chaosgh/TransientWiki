@@ -224,7 +224,9 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
         <nav aria-label={locale === "de" ? "Fußzeile" : "Footer"}>
           <Link href={`/${locale}/wiki/`}>{content.footer.wiki}</Link>
           <a href={DISCORD_URL} target="_blank" rel="noreferrer">{content.footer.discord}</a>
-          <Link href={`/${locale}/wiki/impressum/`}>{content.footer.imprint}</Link>
+          <Link href={`/${locale}/wiki/${locale === "en" ? "legal-notice" : "impressum"}/`}>
+            {content.footer.imprint}
+          </Link>
           <Link href={`/${locale}/wiki/privacy/`}>{content.footer.privacy}</Link>
         </nav>
         <p>Minecraft is a trademark of Mojang Studios. TransientRealm is not affiliated with Mojang.</p>
