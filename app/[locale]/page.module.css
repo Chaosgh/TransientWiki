@@ -43,13 +43,8 @@
 .hero h1 { max-width: 810px; margin: 0; color: #f7e8cb; font-size: clamp(3.5rem, 6.3vw, 7.2rem); line-height: .91; letter-spacing: -.055em; text-shadow: 0 3px 0 #3b1c0d, 0 18px 40px rgba(0,0,0,.5); text-wrap: balance; }
 .lead { max-width: 700px; margin: 30px 0 0; color: #c7b59b; font-size: clamp(1rem, 1.35vw, 1.2rem); line-height: 1.7; }
 .heroActions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 34px; }
-.primaryButton, .secondaryButton { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; padding: 0 20px; border-radius: 2px; font-size: .82rem; font-weight: 850; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
-.primaryButton { border: 1px solid var(--gold-light); background: linear-gradient(180deg, #f6ad29, #d87a13); color: #211006; box-shadow: inset 0 1px rgba(255,239,191,.48), inset 0 -2px rgba(90,34,5,.28), 0 10px 30px rgba(115,48,7,.34); }
-.primaryButton:hover, .secondaryButton:hover { transform: translateY(-2px); }
-.primaryButton:hover { box-shadow: inset 0 1px rgba(255,239,191,.55), 0 14px 38px rgba(192,91,12,.38); }
-.primaryButton :global(.buttonDot) { width: 7px; height: 7px; border-radius: 50%; background: #281205; box-shadow: 0 0 0 3px rgba(70,27,4,.15); }
-.secondaryButton { border: 1px solid rgba(218,151,75,.34); background: linear-gradient(180deg, rgba(79,44,25,.52), rgba(31,18,13,.72)); color: var(--ink); box-shadow: inset 0 1px rgba(255,221,174,.06); }
-.secondaryButton:hover { border-color: rgba(242,160,27,.7); background: rgba(102,52,22,.42); }
+.secondaryButton { min-height: 52px; display: inline-flex; align-items: center; justify-content: center; gap: 11px; padding: 0 20px; border: 1px solid rgba(218,151,75,.34); border-radius: 2px; background: linear-gradient(180deg, rgba(79,44,25,.52), rgba(31,18,13,.72)); box-shadow: inset 0 1px rgba(255,221,174,.06); color: var(--ink); font-size: .82rem; font-weight: 850; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
+.secondaryButton:hover { border-color: rgba(242,160,27,.7); background: rgba(102,52,22,.42); transform: translateY(-2px); }
 .textButton { padding: 14px 8px; color: #d7b879; font-size: .82rem; font-weight: 800; }
 .textButton:hover { color: var(--gold-light); }
 .ipPlate { width: min(100%, 560px); position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 3px 16px; margin-top: 30px; padding: 15px 18px; border: 1px solid rgba(221,146,65,.32); border-left: 4px solid var(--copper); background: linear-gradient(100deg, rgba(70,38,23,.62), rgba(27,16,12,.72)); box-shadow: inset 0 0 0 1px rgba(255,194,84,.035), 0 10px 28px rgba(0,0,0,.18); }
@@ -101,11 +96,6 @@
 .steps li > span { width: 49px; height: 49px; display: grid; place-items: center; border: 2px solid rgba(214,122,23,.7); border-radius: 50%; background: #21130d; color: var(--gold-light); font: 750 .66rem var(--font-mono); box-shadow: inset 0 0 0 5px rgba(242,160,27,.035); }
 .steps h3 { margin: 2px 0 7px; color: #ebd7b7; font-size: 1.17rem; }
 .steps p { margin: 0; color: #aa9780; line-height: 1.65; }
-.commandLine { grid-column: 1 / -1; display: grid; grid-template-columns: auto 1fr auto; gap: 22px; align-items: center; padding: 19px 22px; border: 1px solid rgba(223,145,60,.28); border-left: 4px solid var(--copper); background: linear-gradient(100deg, #2b1a11, #17100c); box-shadow: inset 0 1px rgba(255,221,166,.04); }
-.commandLine > span { color: #9b8066; font: 700 .6rem var(--font-mono); letter-spacing: .13em; }
-.commandLine code { color: #f1dbb8; font: 750 1rem var(--font-mono); }
-.commandLine button { border: 0; background: transparent; color: var(--gold); font: 750 .69rem var(--font-mono); text-transform: uppercase; cursor: pointer; }
-
 .faq { display: grid; grid-template-columns: .7fr 1.3fr; gap: 90px; align-items: start; }
 .faqList { border-top: 1px solid rgba(222,145,60,.22); }
 .faqList details { border-bottom: 1px solid rgba(222,145,60,.22); }
@@ -157,7 +147,7 @@
   .hero h1 { font-size: clamp(3rem, 14vw, 4.4rem); }
   .lead { font-size: .96rem; }
   .heroActions { align-items: stretch; }
-  .primaryButton, .secondaryButton { width: 100%; }
+  .secondaryButton { width: 100%; }
   .textButton { text-align: center; }
   .ipPlate { grid-template-columns: 1fr auto; }
   .highlights { padding-inline: 20px; }
@@ -168,8 +158,6 @@
   .section h2 { font-size: clamp(2.45rem, 12vw, 3.8rem); }
   .featureGrid { grid-template-columns: 1fr; }
   .featureCard { min-height: 250px; }
-  .commandLine { grid-template-columns: 1fr auto; gap: 10px; }
-  .commandLine > span { grid-column: 1 / -1; }
   .faqList details > p { margin-left: 0; margin-right: 15px; }
   .footer { grid-template-columns: 1fr; padding-inline: 20px; }
   .footer nav { flex-wrap: wrap; gap: 14px 20px; }

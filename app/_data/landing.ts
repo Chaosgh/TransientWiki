@@ -9,7 +9,7 @@ type LandingCopy = {
   metadata: { title: string; description: string };
   nav: { systems: string; start: string; faq: string };
   hero: {
-    title: string; lead: string; play: string; discord: string;
+    title: string; lead: string; discord: string;
     wiki: string; ipLabel: string; copy: string; copied: string;
   };
   highlights: { title: string; detail: string }[];
@@ -35,7 +35,7 @@ export const copy: Record<Locale, LandingCopy> = {
     hero: {
       title: "CityBuild mit Jobs, Kulten und eigenem Labyrinth.",
       lead: "Hol dir ein Plot, levele zehn Berufe parallel, erledige täglich drei Quests oder gründe einen Kult mit eigener Bank und Levelsystem.",
-      play: "Server-IP kopieren", discord: "Discord beitreten", wiki: "Wiki entdecken",
+      discord: "Discord beitreten", wiki: "Wiki entdecken",
       ipLabel: "Server-Adresse", copy: "Kopieren", copied: "Kopiert!",
     },
     highlights: [
@@ -85,7 +85,7 @@ export const copy: Record<Locale, LandingCopy> = {
     hero: {
       title: "CityBuild with jobs, cults, and a procedural maze.",
       lead: "Claim a plot, level ten professions at once, complete three daily quests, or create a cult with its own bank and leveling system.",
-      play: "Copy server IP", discord: "Join Discord", wiki: "Explore the wiki",
+      discord: "Join Discord", wiki: "Explore the wiki",
       ipLabel: "Server address", copy: "Copy", copied: "Copied!",
     },
     highlights: [

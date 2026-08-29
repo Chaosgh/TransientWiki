@@ -94,7 +94,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
             <h1>{content.hero.title}</h1>
             <p className={styles.lead}>{content.hero.lead}</p>
             <div className={styles.heroActions}>
-              <CopyIpButton className={styles.primaryButton} label={content.hero.play} copiedLabel={content.hero.copied} />
               <a className={styles.secondaryButton} href={DISCORD_URL} target="_blank" rel="noreferrer">{content.hero.discord} <span aria-hidden="true">↗</span></a>
               <Link className={styles.textButton} href={`/${locale}/wiki/`}>{content.hero.wiki} <span aria-hidden="true">→</span></Link>
             </div>
@@ -152,10 +151,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
               </li>
             ))}
           </ol>
-          <div className={styles.commandLine}>
-            <span>SERVER ADDRESS</span><code>transientrealm.de</code>
-            <CopyIpButton compact label={content.hero.copy} copiedLabel={content.hero.copied} />
-          </div>
         </section>
 
         <section className={`${styles.section} ${styles.faq}`} id="faq">
