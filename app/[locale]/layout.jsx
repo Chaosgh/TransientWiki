@@ -1,7 +1,3 @@
-import '@fontsource/inter/400.css';
-import '@fontsource/inter/500.css';
-import '@fontsource/inter/700.css';
-import '@fontsource/jetbrains-mono/400.css';
 import '../globals.css';
 import { LOCALES, isLocale } from '../../src/wiki/content';
 import { notFound } from 'next/navigation';
@@ -15,7 +11,7 @@ export function generateStaticParams() {
 export const metadata = {
   metadataBase: new URL('https://transientrealm.de'),
   applicationName: 'TransientRealm',
-  icons: { icon: '/logo.png', apple: '/logo.png' },
+  icons: { icon: '/icon.png', apple: '/icon.png' },
   openGraph: {
     type: 'website',
     siteName: 'TransientRealm',

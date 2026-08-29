@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '../../../../src/wiki/components/Breadcrumbs';
 import MarkdownViewer from '../../../../src/wiki/components/MarkdownViewer';
+import styles from './page.module.css';
 import {
   PAGE_DEFINITIONS,
   getBreadcrumbHome,
@@ -34,11 +35,13 @@ export default async function WikiPage({ params }) {
   if (!definition) notFound();
   const page = getPage(locale, definition);
   const jsonLd = getJsonLd(locale, page);
+  const hasPrimaryHeading = /(^|\n)#\s+.+/.test(page.content);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
       {!page.isHome && <Breadcrumbs homeLabel={getBreadcrumbHome(locale)} homePath={wikiPath(locale)} title={page.title} />}
+      {!hasPrimaryHeading && <h1 className={styles.pageTitle}>{page.title}</h1>}
       <MarkdownViewer content={page.content} locale={locale} />
     </>
   );

@@ -79,7 +79,7 @@ export default function WikiShell({ children, locale, navigation, searchIndex })
           {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
         <div className={styles.branding}>
-          <Image src="/logo.png" alt="TransientRealm" className={styles.logo} width={38} height={28} priority />
+          <Image src="/logo.webp" alt="TransientRealm" className={styles.logo} width={38} height={28} priority />
           <Link href={navigation.home.path} className={styles.title}>TransientRealm Wiki</Link>
         </div>
         <div className={styles.headerActions}>

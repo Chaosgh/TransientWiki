@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     description: content.metadata.description,
     alternates: {
       canonical: `/${locale}/`,
-      languages: { "de-DE": "/de/", en: "/en/", "x-default": "/" },
+      languages: { "de-DE": "/de/", "en-US": "/en/", "x-default": "/de/" },
     },
     openGraph: {
       title: content.metadata.title,
@@ -69,7 +69,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
 
       <header className={styles.header}>
         <Link className={styles.brand} href={`/${locale}/`} aria-label="TransientRealm home">
-          <Image src="/logo.png" width={54} height={54} alt="" loading="eager" />
+          <Image src="/logo.webp" width={54} height={54} alt="" loading="eager" />
           <span>TRANSIENT<em>REALM</em></span>
         </Link>
         <nav className={styles.nav} aria-label={locale === "de" ? "Hauptnavigation" : "Main navigation"}>
@@ -104,7 +104,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
           <div className={styles.heroVisual}>
             <span className={styles.heroGear} aria-hidden="true" />
             <div className={styles.logoFrame}>
-              <Image src="/logo.png" width={640} height={640} alt="TransientRealm steampunk locomotive logo" loading="eager" sizes="(max-width: 900px) 78vw, 42vw" />
+              <Image src="/logo.webp" width={640} height={640} alt="TransientRealm steampunk locomotive logo" loading="eager" sizes="(max-width: 900px) 78vw, 42vw" />
             </div>
           </div>
         </section>
@@ -179,7 +179,7 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
 
       <footer className={styles.footer}>
         <div className={styles.footerBrand}>
-          <Image src="/logo.png" width={64} height={64} alt="" />
+          <Image src="/logo.webp" width={64} height={64} alt="" />
           <div><strong>TransientRealm</strong><span>{content.footer.tagline}</span></div>
         </div>
         <nav aria-label={locale === "de" ? "Fußzeile" : "Footer"}>

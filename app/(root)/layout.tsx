@@ -1,8 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/jetbrains-mono/400.css";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -10,7 +6,7 @@ export const metadata: Metadata = {
   title: "TransientRealm — Steampunk CityBuild & RPG",
   description: "A Minecraft Java realm built around CityBuild, custom professions, quests, factions, and meaningful progression.",
   applicationName: "TransientRealm",
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+  icons: { icon: "/icon.png", apple: "/icon.png" },
   openGraph: {
     type: "website",
     siteName: "TransientRealm",
