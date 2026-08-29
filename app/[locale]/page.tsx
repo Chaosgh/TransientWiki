@@ -107,7 +107,6 @@ export default async function LandingPage({ params }: { params: Promise<{ locale
             <div className={styles.logoHalo} aria-hidden="true" />
             <Image src="/logo.png" width={640} height={640} alt="TransientRealm steampunk locomotive logo" priority sizes="(max-width: 900px) 78vw, 45vw" />
             <div className={`${styles.orbitLabel} ${styles.orbitTop}`}>RPG <b>×</b> CITYBUILD</div>
-            <div className={`${styles.orbitLabel} ${styles.orbitBottom}`}>BUILD <b>·</b> GROW <b>·</b> BELONG</div>
           </div>
           <div className={styles.scrollHint} aria-hidden="true"><span />Scroll</div>
         </section>
