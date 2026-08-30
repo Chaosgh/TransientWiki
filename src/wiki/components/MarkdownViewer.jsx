@@ -4,6 +4,7 @@
 import { Children, createElement, useState } from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import remarkWikiLink from 'remark-wiki-link';
 import { Hash } from 'lucide-react';
@@ -52,7 +53,7 @@ export default function MarkdownViewer({ content, locale }) {
   return (
     <>
       <div className={styles.markdown}>
-        <ReactMarkdown components={components} remarkPlugins={[remarkGfm, [remarkWikiLink, { aliasDivider: '|', hrefTemplate: (permalink) => `/${locale}/wiki/${permalink}`, pageResolver: (name) => [name.split('/').map(slugify).join('/')] }]]}>{content}</ReactMarkdown>
+        <ReactMarkdown components={components} remarkPlugins={[remarkGfm, [remarkWikiLink, { aliasDivider: '|', hrefTemplate: (permalink) => `/${locale}/wiki/${permalink}`, pageResolver: (name) => [name.split('/').map(slugifyHeading).join('/')] }]]} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
       </div>
       {lightbox && <Lightbox {...lightbox} onClose={() => setLightbox(null)} />}
     </>
