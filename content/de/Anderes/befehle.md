@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Befehle</h1>
-</div>
+# Befehle
 
 Die wichtigsten Befehle auf TransientRealm. Job- und Kult-Befehle findest du zusätzlich auf den jeweiligen Seiten.
 
