@@ -2,6 +2,7 @@ import 'server-only';
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { slugifyHeading } from './slug';
 
 export const LOCALES = ['de', 'en'];
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://transientrealm.de';
@@ -170,14 +171,6 @@ function descriptionFrom(content, locale) {
   return value.length > 165 ? `${value.slice(0, 164).trimEnd()}…` : value;
 }
 
-function slugifyHeading(value = '') {
-  return String(value)
-    .replace(/Ä/g, 'Ae').replace(/Ö/g, 'Oe').replace(/Ü/g, 'Ue')
-    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
-    .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-}
-
 function headings(content) {
   const result = [];
   const pattern = /^(#{1,3})\s+(.+)$|<h([1-3])[^>]*>(.*?)<\/h\3>/gim;
@@ -208,13 +201,44 @@ function anchorMap(id, locale) {
 }
 
 function resolveOldWikiRoute(value) {
-  const normalized = decodeURIComponent(value)
+  let decoded = value;
+  try {
+    decoded = decodeURIComponent(value);
+  } catch {
+    return null;
+  }
+  const normalized = decoded
     .replace(/^#?\/?wiki\/?/i, '')
     .replace(/^\/+|\/+$/g, '')
     .split('/')
     .map(slugifyHeading)
     .join('/');
   return PAGE_DEFINITIONS.find((entry) => entry.routes.de === normalized) || null;
+}
+
+function rewriteMarkdownLinks(content, rewrite) {
+  let output = '';
+  let cursor = 0;
+  while (cursor < content.length) {
+    const start = content.indexOf('](', cursor);
+    if (start < 0) return output + content.slice(cursor);
+    output += content.slice(cursor, start + 2);
+    let index = start + 2;
+    let depth = 1;
+    let escaped = false;
+    for (; index < content.length; index += 1) {
+      const char = content[index];
+      if (escaped) { escaped = false; continue; }
+      if (char === '\\') { escaped = true; continue; }
+      if (char === '(') depth += 1;
+      if (char === ')' && --depth === 0) break;
+    }
+    if (depth !== 0) return output + content.slice(start + 2);
+    output += rewrite(content.slice(start + 2, index));
+    output += ')';
+    cursor = index + 1;
+  }
+  return output;
 }
 
 export function localizeContent(content, locale, currentId) {
@@ -239,9 +263,9 @@ export function localizeContent(content, locale, currentId) {
     return `${wikiPath(locale, definition.routes[locale])}${localizedHash ? `#${localizedHash}` : ''}`;
   };
 
-  return content
-    .replace(/(href=["'])([^"']+)(["'])/gi, (_match, before, href, after) => `${before}${rewrite(href)}${after}`)
-    .replace(/(\]\()([^)]+)(\))/g, (_match, before, href, after) => `${before}${rewrite(href)}${after}`);
+  const htmlRewritten = content
+    .replace(/(href=["'])([^"']+)(["'])/gi, (_match, before, href, after) => `${before}${rewrite(href)}${after}`);
+  return rewriteMarkdownLinks(htmlRewritten, rewrite);
 }
 
 export function getPage(locale, definition) {

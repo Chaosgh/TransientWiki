@@ -1,3 +1,7 @@
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/jetbrains-mono/400.css';
 import '../globals.css';
 import { LOCALES, isLocale } from '../../src/wiki/content';
 import { notFound } from 'next/navigation';

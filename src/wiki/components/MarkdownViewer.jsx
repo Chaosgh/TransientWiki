@@ -4,20 +4,12 @@
 import { Children, createElement, useState } from 'react';
 import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 import remarkWikiLink from 'remark-wiki-link';
 import { Hash } from 'lucide-react';
 import Lightbox from './Lightbox';
 import styles from './MarkdownViewer.module.css';
-
-function slugify(value = '') {
-  return String(value)
-    .replace(/Ä/g, 'Ae').replace(/Ö/g, 'Oe').replace(/Ü/g, 'Ue')
-    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
-    .normalize('NFKD').replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-}
+import { slugifyHeading } from '../slug';
 
 function childrenText(children) {
   return Children.toArray(children).map((child) => {
@@ -29,7 +21,7 @@ function childrenText(children) {
 function heading(Tag, label) {
   return function Heading({ children, node, ...props }) {
     void node;
-    const id = slugify(childrenText(children));
+    const id = slugifyHeading(childrenText(children));
     return (
       <div className={styles.headingWrapper}>
         {createElement(Tag, { id, ...props }, children)}
@@ -60,7 +52,7 @@ export default function MarkdownViewer({ content, locale }) {
   return (
     <>
       <div className={styles.markdown}>
-        <ReactMarkdown components={components} remarkPlugins={[remarkGfm, [remarkWikiLink, { aliasDivider: '|', hrefTemplate: (permalink) => `/${locale}/wiki/${permalink}`, pageResolver: (name) => [name.split('/').map(slugify).join('/')] }]]} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        <ReactMarkdown components={components} remarkPlugins={[remarkGfm, [remarkWikiLink, { aliasDivider: '|', hrefTemplate: (permalink) => `/${locale}/wiki/${permalink}`, pageResolver: (name) => [name.split('/').map(slugify).join('/')] }]]}>{content}</ReactMarkdown>
       </div>
       {lightbox && <Lightbox {...lightbox} onClose={() => setLightbox(null)} />}
     </>

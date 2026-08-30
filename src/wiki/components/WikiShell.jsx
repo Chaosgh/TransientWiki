@@ -14,22 +14,24 @@ const COPY = {
   en: { menu: 'Toggle menu', search: 'Search', skip: 'Skip to content', top: 'Back to top' },
 };
 
-export default function WikiShell({ children, locale, navigation, searchIndex }) {
+export default function WikiShell({ children, locale, navigation }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [searchIndex, setSearchIndex] = useState([]);
   const contentRef = useRef(null);
   const pathname = usePathname();
   const copy = COPY[locale];
 
   const languageHref = useMemo(() => {
+    const normalizedPathname = pathname !== '/' ? pathname.replace(/\/+$/, '') : pathname;
     const allLinks = [
       navigation.home,
       ...navigation.topLevel,
       ...navigation.folders.flatMap((folder) => folder.items),
       ...Object.values(navigation.footer),
     ];
-    return allLinks.find((link) => link.path === pathname)?.alternate || `/${locale === 'de' ? 'en' : 'de'}/wiki`;
+    return allLinks.find((link) => link.path.replace(/\/+$/, '') === normalizedPathname)?.alternate || `/${locale === 'de' ? 'en' : 'de'}/wiki`;
   }, [locale, navigation, pathname]);
 
   const searchKey = typeof navigator !== 'undefined' && /Mac|iPhone|iPad/.test(navigator.platform) ? '⌘ K' : 'Ctrl K';
@@ -61,6 +63,21 @@ export default function WikiShell({ children, locale, navigation, searchIndex })
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, [isSearchOpen]);
+
+  useEffect(() => {
+    if (!isSearchOpen || searchIndex.length > 0) return undefined;
+    const controller = new AbortController();
+    fetch(`/search-${locale}.json`, { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Search index request failed: ${response.status}`);
+        return response.json();
+      })
+      .then(setSearchIndex)
+      .catch((error) => {
+        if (error.name !== 'AbortError') console.error(error);
+      });
+    return () => controller.abort();
+  }, [isSearchOpen, locale, searchIndex.length]);
 
   const handleScroll = () => {
     const element = contentRef.current;
