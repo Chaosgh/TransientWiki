@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Factions</h1>
-</div>
+# Factions
 
 From **cult level 10**, your cult chooses one of three factions. Each faction unlocks its own bonuses starting at level 10, which become stronger as the cult level increases. Unlocked faction bonuses remain active and apply to all members across the cult.
 

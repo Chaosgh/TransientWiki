@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Gastronom</h1>
-</div>
+# Gastronom
 
 Der Gastronom ist der Koch-Job: Bereite Gerichte an **Kochstationen** zu und verdiene dabei Job-XP und Pfund.
 

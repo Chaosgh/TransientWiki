@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Kulte & Verwaltung</h1>
-</div>
+# Kulte & Verwaltung
 
 Hier erfährst du, wie du einen Kult gründest und verwaltest.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Fraktionen</h1>
-</div>
+# Fraktionen
 
 Ab **Kult-Level 10** wählt euer Kult eine von drei Fraktionen. Jede Fraktion schaltet ab Level 10 eigene Boni frei, die mit steigendem Kult-Level stärker werden. Freigeschaltete Fraktionsboni bleiben aktiv und gelten kultweit für alle Mitglieder.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Login-Belohnungen</h1>
-</div>
+# Login-Belohnungen
 
 Für jeden Tag, an dem du dich einloggst, erhältst du eine **tägliche Login-Belohnung**. Die Belohnungen steigen über **100 Tage** an — je weiter du im Kalender kommst, desto mehr **Pfund** und **Ectoplasma**.
 

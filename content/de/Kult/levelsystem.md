@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Levelsystem</h1>
-</div>
+# Levelsystem
 
 Dein Kult kann im Level aufsteigen, um neue Funktionen und Plätze für Mitglieder freizuschalten. Levelaufstiege kosten **Rubine** — die Kult-eigene Währung. Rubine erhält der Kult, wenn Mitglieder **Pfund** über `/kult donate` spenden.
 

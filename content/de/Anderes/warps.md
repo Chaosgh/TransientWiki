@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Warps</h1>
-</div>
+# Warps
 
 Warps sind Teleportationspunkte, die von Spielern selbst erstellt und benannt werden können.
 

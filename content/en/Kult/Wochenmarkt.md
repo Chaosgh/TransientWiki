@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Weekly market</h1>
-</div>
+# Weekly market
 
 The weekly market is an exclusive trading opportunity for cults from **Level 5**. Here you can buy rare items with **Pounds**.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Freunde</h1>
-</div>
+# Freunde
 
 Füge andere Spieler als Freunde hinzu, levelt eure Freundschaft gemeinsam hoch und schaltet dabei besondere Features frei.
 

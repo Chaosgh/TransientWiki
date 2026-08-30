@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Ränge & Rechte</h1>
-</div>
+# Ränge & Rechte
 
 Ein erfolgreicher Kult braucht eine klare Hierarchie. Das Rangsystem ermöglicht es dir, Aufgaben zu verteilen und die Kontrolle zu behalten.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Vote</h1>
-</div>
+# Vote
 
 By voting for TransientRealm on server lists, you support the server and receive **Votecoins** that you can exchange for Vote Crates.
 

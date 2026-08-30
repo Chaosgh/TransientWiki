@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Kult-Befehle</h1>
-</div>
+# Kult-Befehle
 
 | Befehl | Beschreibung |
 |---|---|

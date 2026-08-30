@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Angeln</h1>
-</div>
+# Angeln
 
 Das Gewässer birgt viele Geheimnisse — von gewöhnlichen Fischen bis hin zu seltenen Schätzen.
 

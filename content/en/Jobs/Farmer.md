@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Farmer</h1>
-</div>
+# Farmer
 
 The Farmer is the farming job: harvest mature crops for job XP and Pounds.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Commands</h1>
-</div>
+# Commands
 
 The most important commands on TransientRealm. Dedicated pages list the job and cult commands.
 

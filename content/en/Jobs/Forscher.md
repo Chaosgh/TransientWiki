@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Researcher</h1>
-</div>
+# Researcher
 
 Explore the past and unearth forgotten artifacts. The rarer the find, the more valuable the reward.
 

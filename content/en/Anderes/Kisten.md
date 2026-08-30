@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Crates</h1>
-</div>
+# Crates
 
 Open crates for special rewards — from Pounds and items to exclusive ranks and badges.
 

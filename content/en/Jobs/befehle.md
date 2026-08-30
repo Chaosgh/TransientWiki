@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Job commands</h1>
-</div>
+# Job commands
 
 | command | Description |
 |---|---|

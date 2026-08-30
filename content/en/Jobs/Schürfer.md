@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Miner</h1>
-</div>
+# Miner
 
 The miner is the mining job: mine stone and ores for job XP and Pounds.
 

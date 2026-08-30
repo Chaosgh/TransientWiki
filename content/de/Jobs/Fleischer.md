@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Fleischer</h1>
-</div>
+# Fleischer
 
 Der Fleischer ist der Tier-Job: Erlege Nutztiere und Fische für Job-XP und Pfund.
 

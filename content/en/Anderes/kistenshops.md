@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Chest Shops</h1>
-</div>
+# Chest Shops
 
 Buy and sell items directly from a chest, barrel or trapped chest using a simple sign.
 

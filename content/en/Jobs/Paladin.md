@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Paladin</h1>
-</div>
+# Paladin
 
 The Paladin is the combat job: kill enemy monsters and bosses for job XP and Pounds.
 

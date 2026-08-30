@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Jobs & Professions</h1>
-</div>
+# Jobs & Professions
 
 Choose a profession to earn Pounds and collect job XP. As the level increases, new possibilities become available.
 

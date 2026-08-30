@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Allowed Mods</h1>
-</div>
+# Allowed Mods
 
 > This is the official whitelist. If it's not here, it's not allowed. Feel free to ask in Discord - if it's allowed, it'll be mentioned here.
 

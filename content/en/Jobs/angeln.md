@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Fishing</h1>
-</div>
+# Fishing
 
 The waters hold many secrets — from common fish to rare treasures.
 

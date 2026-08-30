@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Cult Commands</h1>
-</div>
+# Cult Commands
 
 | command | Description |
 |---|---|

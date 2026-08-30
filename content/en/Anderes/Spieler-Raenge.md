@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Player Ranks</h1>
-</div>
+# Player Ranks
 
 Server ranks show your status in the chat and tab list and provide additional benefits depending on your rank.
 

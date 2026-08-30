@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Cults & Administration</h1>
-</div>
+# Cults & Administration
 
 Here's how to start and manage a cult.
 

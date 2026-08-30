@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Wochenmarkt</h1>
-</div>
+# Wochenmarkt
 
 Der Wochenmarkt ist eine exklusive Handelsmöglichkeit für Kulte ab **Level 5**. Hier könnt ihr mit **Pfund** seltene Gegenstände kaufen.
 

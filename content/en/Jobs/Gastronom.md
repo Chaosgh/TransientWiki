@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Chef</h1>
-</div>
+# Chef
 
 The Chef is the cooking job: prepare dishes at **Cooking Stations** to earn Job XP and Pounds.
 

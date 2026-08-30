@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Job-Befehle</h1>
-</div>
+# Job-Befehle
 
 | Befehl | Beschreibung |
 |---|---|

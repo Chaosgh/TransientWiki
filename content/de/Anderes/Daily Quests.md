@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Tägliche Quests</h1>
-</div>
+# Tägliche Quests
 
 Die täglichen Quests kannst du dir entweder bei **Simon** ansehen — einem NPC am `/spawn`, den du einfach ansprechen kannst — oder von überall per `/quests` öffnen.
 

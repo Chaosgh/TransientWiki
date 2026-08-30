@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">The Labyrinth</h1>
-</div>
+# The Labyrinth
 
 Deep in the Transient Maze, treasures, traps and secrets await — if you manage to get out alive.
 

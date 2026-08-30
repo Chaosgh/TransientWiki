@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Spieler-Ränge</h1>
-</div>
+# Spieler-Ränge
 
 Server-Ränge zeigen deinen Status im Chat und in der Tab-Liste und bringen je nach Rang zusätzliche Vorteile.
 

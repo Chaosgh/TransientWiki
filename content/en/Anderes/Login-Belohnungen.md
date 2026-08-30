@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Login Rewards</h1>
-</div>
+# Login Rewards
 
 For every day you log in you will receive a **daily login reward**. Rewards increase over **100 days** — the further you get through the calendar, the more **Pounds** and **ectoplasm** you get.
 

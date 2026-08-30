@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Kisten</h1>
-</div>
+# Kisten
 
 Öffne Kisten für besondere Belohnungen — von Pfund und Items bis hin zu exklusiven Rängen und Badges.
 

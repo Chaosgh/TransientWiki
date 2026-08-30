@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Kistenshops</h1>
-</div>
+# Kistenshops
 
 Verkaufe Items direkt von einer Kiste, einem Barrel oder einer Trapped-Kiste — mit einem einfachen Schild.
 

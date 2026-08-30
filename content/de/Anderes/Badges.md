@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Badges</h1>
-</div>
+# Badges
 
 Badges sind **kosmetische Abzeichen**, die über deinem Kopf schweben — andere Spieler sehen sie in deiner Nähe.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Farmer</h1>
-</div>
+# Farmer
 
 Der Farmer ist der Landwirtschafts-Job: Ernte ausgewachsene Feldfrüchte für Job-XP und Pfund.
 

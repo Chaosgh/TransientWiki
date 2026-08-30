@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Jobs & Berufe</h1>
-</div>
+# Jobs & Berufe
 
 Wähle einen Beruf, um Pfund zu verdienen und Job-XP zu sammeln. Mit steigendem Level schalten sich neue Möglichkeiten frei.
 

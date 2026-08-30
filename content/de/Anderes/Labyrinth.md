@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Das Labyrinth</h1>
-</div>
+# Das Labyrinth
 
 Tief im Transient Maze warten Schätze, Fallen und Geheimnisse — wenn du es schaffst, lebend herauszukommen.
 

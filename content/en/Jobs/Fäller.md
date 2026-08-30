@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Lumberjack</h1>
-</div>
+# Lumberjack
 
 The lumberjack is the wood job: fell trees and earn job XP and Pounds for cutting down logs.
 

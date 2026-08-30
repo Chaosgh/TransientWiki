@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Rune Mechanic</h1>
-</div>
+# Rune Mechanic
 
 Combine technology with magic through the art of runes. The rune mechanic forges powerful equipment at a special altar.
 

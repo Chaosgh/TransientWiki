@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Abstimmen (Vote)</h1>
-</div>
+# Abstimmen (Vote)
 
 Durch das Abstimmen für TransientRealm auf Server-Listen unterstützt du den Server und erhältst dafür **Votecoins**, die du gegen Vote-Kisten eintauschen kannst.
 

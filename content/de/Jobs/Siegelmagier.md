@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Siegelmagier</h1>
-</div>
+# Siegelmagier
 
 ## Der Siegelaltar
 

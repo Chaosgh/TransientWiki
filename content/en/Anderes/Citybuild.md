@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Citybuild</h1>
-</div>
+# Citybuild
 
 Citybuild gives you your own plot on the server. Claim your land, build a home and shape it however you like.
 

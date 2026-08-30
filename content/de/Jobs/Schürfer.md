@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Schürfer</h1>
-</div>
+# Schürfer
 
 Der Schürfer ist der Bergbau-Job: Baue Stein und Erze ab für Job-XP und Pfund.
 

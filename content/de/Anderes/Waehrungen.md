@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Währungen</h1>
-</div>
+# Währungen
 
 Auf TransientRealm gibt es drei Währungen mit klar getrennten Rollen.
 

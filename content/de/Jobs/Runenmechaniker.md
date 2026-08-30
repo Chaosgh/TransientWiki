@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Runenmechaniker</h1>
-</div>
+# Runenmechaniker
 
 Verbinde Technologie mit Magie durch die Kunst der Runen. Der Runenmechaniker erschmiedet mächtige Ausrüstung an einem speziellen Altar.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Forscher</h1>
-</div>
+# Forscher
 
 Erforsche die Vergangenheit und grabe vergessene Artefakte aus. Je seltener der Fund, desto wertvoller die Belohnung.
 

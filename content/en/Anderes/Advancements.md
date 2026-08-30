@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Advancements</h1>
-</div>
+# Advancements
 
 Advancements are **Achievements** with **rewards** (Pounds, Ectoplasm or Items) that you unlock as you play. Open the in-game Advancement dashboard to see your progress and **claim** rewards.
 

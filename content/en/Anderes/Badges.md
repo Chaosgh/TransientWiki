@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Badges</h1>
-</div>
+# Badges
 
 Badges are **cosmetic badges** that float above your head — other players will see them around you.
 

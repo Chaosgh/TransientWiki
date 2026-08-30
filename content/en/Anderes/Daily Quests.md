@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Daily Quests</h1>
-</div>
+# Daily Quests
 
 Talk to **Simon**, an NPC at `/spawn`, to view your daily quests, or open them from anywhere with `/quests`.
 

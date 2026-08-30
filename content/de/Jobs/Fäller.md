@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Fäller</h1>
-</div>
+# Fäller
 
 Der Fäller ist der Holz-Job: Fälle Bäume und verdiene Job-XP und Pfund fürs Abbauen von Stämmen.
 

@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Farmwelt</h1>
-</div>
+# Farmwelt
 
 Die Farmwelt ist eine separate Welt, in der du uneingeschränkt Farmen bauen und Ressourcen abbauen kannst. Anders als in der Hauptwelt darf hier alles abgebaut und verändert werden.
 

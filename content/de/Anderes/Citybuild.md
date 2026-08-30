@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Citybuild</h1>
-</div>
+# Citybuild
 
 Der Citybuild ist dein eigenes Stück Land auf dem Server. Beantrage ein Plot, bau dein Heim und gestalte es ganz nach deinen Vorstellungen.
 

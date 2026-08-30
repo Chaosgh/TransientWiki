@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Sigil Mage</h1>
-</div>
+# Sigil Mage
 
 ## The Sigil Altar
 

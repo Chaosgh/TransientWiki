@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Resource World</h1>
-</div>
+# Resource World
 
 The Resource World is a separate world where you can build farms and mine resources without restrictions. Unlike in the main world, everything here can be dismantled and changed.
 

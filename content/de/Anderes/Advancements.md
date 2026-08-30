@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Advancements</h1>
-</div>
+# Advancements
 
 Advancements sind **Erfolge** mit **Belohnungen** (Pfund, Ectoplasma oder Items), die du beim Spielen freischaltest. Öffne die Advancement-Übersicht im Spiel, um deinen Fortschritt zu sehen und Belohnungen **abzuholen**.
 

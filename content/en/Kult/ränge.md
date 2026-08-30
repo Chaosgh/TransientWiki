@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Ranks & Permissions</h1>
-</div>
+# Ranks & Permissions
 
 A successful cult needs a clear hierarchy. The ranking system allows you to distribute tasks and maintain control.
 

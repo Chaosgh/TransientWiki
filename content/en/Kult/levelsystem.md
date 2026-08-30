@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">Level system</h1>
-</div>
+# Level system
 
 Your cult can level up to unlock new features and member slots. Leveling up costs **Rubies** — the cult's own currency. The cult receives rubies when members donate **Pounds** via `/kult donate`.
 

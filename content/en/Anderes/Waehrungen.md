@@ -1,6 +1,4 @@
-<div class="md-banner">
-    <h1 style="margin: 0;">currencies</h1>
-</div>
+# currencies
 
 On TransientRealm there are three currencies with clearly separated roles.
 
